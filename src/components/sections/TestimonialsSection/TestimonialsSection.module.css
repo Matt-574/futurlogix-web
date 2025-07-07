@@ -1,0 +1,76 @@
+.section {
+    padding: 6rem 0; /* Padding vertical, sin padding horizontal */
+    background-color: #111827;
+    color: white;
+    overflow: hidden; /* Oculta el desbordamiento del marquee */
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  
+  .marqueeContainer {
+    display: flex;
+    width: max-content;
+    animation: marquee 60s linear infinite;
+  }
+  
+  .marqueeContainer:hover {
+    animation-play-state: paused;
+  }
+  
+  .testimonialCard {
+    background-color: #0A0A0A;
+    border: 1px solid #374151;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    width: 400px; /* Ancho fijo para cada tarjeta */
+    margin: 0 1rem;
+    flex-shrink: 0; /* Evita que las tarjetas se encojan */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quote {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #d1d5db;
+  }
+  
+  .authorInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto; /* Empuja al final de la tarjeta */
+  }
+  
+  .authorAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #374151; /* Placeholder */
+  }
+  
+  .authorName {
+    font-weight: 600;
+  }
+  
+  .authorRole {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }

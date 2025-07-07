@@ -1,0 +1,126 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+    transition: transform 0.35s ease-in-out;
+  }
+  
+  .navbarContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+  }
+  
+  .logoContainer {
+    flex-shrink: 0;
+  }
+  
+  .desktopNav {
+    display: none;
+  }
+  
+  .navItems {
+    margin-left: 2.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  
+  .navLink {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #d1d5db;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .navLink:hover {
+    background-color: #374151;
+    color: #ffffff;
+  }
+  
+  .navLinkActive {
+    color: #ffffff;
+  }
+  
+  .ctaButton {
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+    color: #ffffff;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  
+  .ctaButton:hover {
+    opacity: 0.9;
+  }
+  
+  .mobileMenuButton {
+    display: flex;
+    margin-right: -0.5rem;
+  }
+  
+  .mobileMenu {
+    border-top: 1px solid #4b5563;
+  }
+  
+  .mobileMenuNav {
+    padding: 0.5rem 0.75rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mobileNavLink {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #d1d5db;
+    text-decoration: none;
+  }
+  
+  .mobileNavLink:hover {
+    background-color: #374151;
+    color: #ffffff;
+  }
+  
+  .mobileNavLinkActive {
+    background-color: #111827;
+    color: #ffffff;
+  }
+  
+  .mobileCtaContainer {
+    padding: 1rem 0.5rem;
+  }
+  
+  .mobileCtaButton {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Media Query para mostrar/ocultar elementos en escritorio */
+  @media (min-width: 768px) {
+    .desktopNav {
+      display: block;
+    }
+    .mobileMenuButton {
+      display: none;
+    }
+  }
+  

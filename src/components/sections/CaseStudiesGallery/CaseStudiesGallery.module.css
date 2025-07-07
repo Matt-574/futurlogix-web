@@ -1,0 +1,85 @@
+.grid {
+    --gap: 1.5rem;
+    --columns: 1;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--columns), 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      --columns: 2;
+    }
+  }
+  
+  .card {
+    background-color: #111827; /* gray-900 */
+    border: 1px solid #374151; /* gray-700 */
+    border-radius: 0.75rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+  }
+  
+  .imageContainer {
+    width: 100%;
+    height: 200px;
+    background-color: #374151; /* Placeholder color */
+    /* En un proyecto real, aquí iría un componente de imagen */
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .industryTag {
+    display: inline-block;
+    background-color: rgba(139, 92, 246, 0.2); /* violet-500 con opacidad */
+    color: #a78bfa; /* violet-400 */
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  .metrics {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #374151; /* gray-700 */
+  }
+  
+  .metricItem {
+    text-align: left;
+  }
+  
+  .metricValue {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #6366f1; /* indigo-500 */
+  }
+  
+  .metricLabel {
+    font-size: 0.75rem;
+    color: #9ca3af; /* gray-400 */
+    text-transform: uppercase;
+  }
+  

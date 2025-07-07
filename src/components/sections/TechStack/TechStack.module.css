@@ -1,0 +1,79 @@
+.section {
+    padding: 6rem 1rem;
+    background-color: #111827;
+    color: white;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  
+  .orbitingContainer {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajusta la altura según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .centerLogo {
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+  }
+  
+  .orbit {
+    position: absolute;
+    border: 1px dashed #4b5563; /* gray-700 */
+    border-radius: 50%;
+    animation: spin 30s linear infinite;
+  }
+  
+  .orbit1 {
+    width: 200px;
+    height: 200px;
+    animation-duration: 20s;
+  }
+  
+  .orbit2 {
+    width: 350px;
+    height: 350px;
+    animation-duration: 35s;
+  }
+  
+  .techLogo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #1f2937; /* gray-800 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+  
+  /* Posicionamiento de los logos en las órbitas */
+  .techLogo1 { top: -20px; left: 50%; transform: translateX(-50%); }
+  .techLogo2 { bottom: -20px; left: 50%; transform: translateX(-50%); }
+  .techLogo3 { left: -20px; top: 50%; transform: translateY(-50%); }
+  .techLogo4 { right: -20px; top: 50%; transform: translateY(-50%); }
+  
+  .techLogo5 { top: 10%; left: 10%; }
+  .techLogo6 { top: 10%; right: 10%; }
+  .techLogo7 { bottom: 10%; left: 10%; }
+  .techLogo8 { bottom: 10%; right: 10%; }
+  
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
