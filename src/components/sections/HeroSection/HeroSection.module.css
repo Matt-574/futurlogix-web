@@ -4,10 +4,23 @@
   justify-content: center;
   min-height: 100vh;
   padding: 1rem;
-  background-color: #0A0A0A;
+  background-color: transparent; /* Fondo transparente para que se vea el fondo de la app */
   position: relative;
   overflow: hidden;
   text-align: center;
+}
+
+.threeDLogoContainer {
+  /* Este contenedor ya no es necesario si el logo se renderiza inline */
+  display: none;
+}
+
+.threeDLogoInlineContainer {
+  width: 100%;
+  max-width: 300px; /* Ajusta el tamaño máximo del logo según sea necesario */
+  height: 300px; /* Ajusta la altura según sea necesario */
+  margin-top: 2rem; /* Espacio entre el subtítulo y el logo */
+  z-index: 10;
 }
 
 .content {
@@ -21,7 +34,7 @@
 .title {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #012f53; /* Color de marca oscuro para el texto */
   max-width: 800px;
   letter-spacing: -0.05em;
 }
@@ -33,7 +46,7 @@
 }
 
 .gradientText {
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  background: linear-gradient(to right, #0481ad, #0bc9e8); /* Gradiente con colores de marca */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,7 +54,7 @@
 
 .subtitle {
   font-size: 1.125rem;
-  color: #9ca3af; /* gray-400 */
+  color: #4b5563; /* Gris oscuro para el subtítulo */
   max-width: 600px;
   line-height: 1.7;
 }
@@ -51,7 +64,7 @@
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
+  color: #012f53; /* Color de marca para el indicador */
   opacity: 0.7;
 }
 
@@ -75,7 +88,7 @@
 .shape1 {
   width: 400px;
   height: 400px;
-  background: #3b82f6;
+  background: #07aad2; /* Color de marca */
   top: -50px;
   left: -50px;
   animation-duration: 25s;
@@ -84,7 +97,7 @@
 .shape2 {
   width: 300px;
   height: 300px;
-  background: #8b5cf6;
+  background: #0bc9e8; /* Color de marca */
   bottom: -50px;
   right: -50px;
   animation-duration: 20s;

@@ -3,7 +3,8 @@
     --columns: 1;
     display: grid;
     gap: var(--gap);
-    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible columns */
+    grid-auto-rows: 1px; /* For masonry effect */
     max-width: 1280px;
     margin: 0 auto;
   }
@@ -14,6 +15,16 @@
     }
   }
   
+  .gridItem {
+    /* For masonry effect, adjust row span based on content */
+    /* This is a simplified masonry. For true masonry, content height needs to be calculated */
+    grid-row-end: span 25; /* Default span, adjust as needed for visual variety */
+  }
+
+  /* Example for varying card heights for a masonry-like effect */
+  .gridItem:nth-child(2n) { grid-row-end: span 30; }
+  .gridItem:nth-child(3n) { grid-row-end: span 20; }
+  
   .card {
     background-color: #111827; /* gray-900 */
     border: 1px solid #374151; /* gray-700 */
@@ -21,24 +32,44 @@
     overflow: hidden;
     text-decoration: none;
     color: white;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure card fills its grid item */
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1;
   }
   
   .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4); /* More pronounced shadow/glow */
   }
   
   .imageContainer {
     width: 100%;
     height: 200px;
-    background-color: #374151; /* Placeholder color */
-    /* En un proyecto real, aquí iría un componente de imagen */
+    background-size: cover; /* Cover the area */
+    background-position: center; /* Center the image */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  
+  .clientLogo {
+    max-width: 80px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el logo */
+    padding: 0.5rem;
+    border-radius: 0.25rem;
   }
   
   .content {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .industryTag {
@@ -62,7 +93,7 @@
   .metrics {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: auto; /* Empuja las métricas al final */
     padding-top: 1.5rem;
     border-top: 1px solid #374151; /* gray-700 */
   }

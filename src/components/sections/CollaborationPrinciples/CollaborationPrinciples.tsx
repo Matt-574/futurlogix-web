@@ -31,6 +31,7 @@ const CollaborationPrinciples = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
           >
+            <div className={styles.borderBeam}></div> {/* Nuevo div para el efecto de borde */}
             <h3 className={styles.cardTitle}>{principle.title}</h3>
             <p className={styles.cardDescription}>{principle.description}</p>
           </motion.div>

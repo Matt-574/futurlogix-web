@@ -1,0 +1,48 @@
+.section {
+  padding: 6rem 1rem;
+  background-color: #0A0A0A;
+  color: white;
+  text-align: center;
+}
+
+.testimonialContent {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 3rem;
+}
+
+.quote {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #d1d5db;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.authorAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6366f1;
+}
+
+.authorName {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.authorRole {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}

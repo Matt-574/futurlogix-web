@@ -1,19 +1,19 @@
 .footer {
-    background-color: #000000;
-    color: #9ca3af; /* gray-400 */
-    border-top: 1px solid #1f2937; /* gray-800 */
+    background-color: #f9fafb; /* Gris muy claro */
+    color: #4b5563; /* Gris más oscuro para el texto */
+    border-top: 1px solid #e5e7eb; /* Borde sutil */
   }
   
   .footerContent {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2.5rem 1rem; /* Aumentamos el padding vertical */
+    padding: 3rem 1rem;
   }
   
   .footerGrid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     text-align: center;
   }
   
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   @media (min-width: 768px) {
@@ -39,42 +39,42 @@
   
   .socialLinks {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     margin-top: 1rem;
   }
   
   .socialIcon {
-    color: #9ca3af; /* gray-400 */
+    color: #6b7280; /* Gris medio */
     transition: color 0.3s;
   }
   
   .socialIcon:hover {
-    color: #ffffff;
+    color: #02507a; /* Color de marca */
   }
   
   .footerLinks {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
   }
   
   .footerLink {
-    color: #9ca3af; /* gray-400 */
+    color: #4b5563;
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
   
   .footerLink:hover {
-    color: #ffffff;
+    color: #0481ad; /* Color de marca */
     text-decoration: underline;
   }
   
   .footerCopyright {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid #1f2937; /* gray-800 */
+    border-top: 1px solid #e5e7eb;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    color: #6b7280;
   }
-  

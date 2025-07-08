@@ -23,6 +23,7 @@ const ShowcaseSection = () => {
           style={{ scale, opacity, x }}
           className={styles.geminiContent}
         >
+          <div className={styles.geminiBackgroundEffect}></div> {/* Nuevo div para el efecto de fondo */}
           <h3 className={styles.geminiTitle}>Industria Destacada: Turismo y Hospitalidad</h3>
           <p className={styles.geminiDescription}>
             Hemos revolucionado el sector turístico a través de nuestra marca especialista, <span className={styles.gradientText}>Journeest</span>. Transformamos las operaciones de hoteles y empresas de servicios, automatizando la comunicación, duplicando reservas directas y creando experiencias de cliente inolvidables.

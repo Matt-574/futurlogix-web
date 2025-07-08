@@ -1,0 +1,76 @@
+.section {
+  padding: 6rem 1rem;
+  background-color: #0A0A0A;
+  color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 0.7fr; /* Columna de datos un poco más pequeña */
+  }
+}
+
+.narrativeColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.narrativeTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.narrativeContent {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.dataColumn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea la tarjeta de datos arriba */
+}
+
+.dataCard {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para la tarjeta de datos */
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #6366f1;
+}
+
+.dataCard p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.dataCard ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.dataCard li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #d1d5db;
+}

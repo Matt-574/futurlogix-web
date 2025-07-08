@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
+import ThreeDAnimatedLogo from '../../common/ThreeDAnimatedLogo';
+import { SparklesPreview } from '../../ui/SparklesPreview';
 
 const HeroSection = () => {
   return (
@@ -14,12 +16,14 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className={styles.title}>
-          De la <span className={styles.gradientText}>Complejidad</span> al Crecimiento.
-        </h1>
+        <SparklesPreview />
         <p className={styles.subtitle}>
           Para líderes que no buscan una herramienta, sino una ventaja competitiva. Diseñamos y construimos tu futuro rentable.
         </p>
+        {/* El logo 3D ahora se renderiza debajo del texto */}
+        <div className={styles.threeDLogoInlineContainer}>
+          <ThreeDAnimatedLogo />
+        </div>
       </motion.div>
       <div className={styles.scrollIndicator}>
         <span>↓</span>

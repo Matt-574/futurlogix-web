@@ -1,11 +1,16 @@
 import Logo from '../../layout/Logo';
 import styles from './TechStack.module.css';
 
-// Placeholder para los logos de las tecnologías.
-// En un proyecto real, usarías los SVGs o imágenes reales.
-const TechIcon = ({ label }: { label: string }) => (
-  <div style={{ fontSize: '10px', color: '#9ca3af' }}>{label}</div>
-);
+const techLogos = [
+  { label: "React", src: "https://via.placeholder.com/50x50/000000/61DAFB?text=React" },
+  { label: "Node.js", src: "https://via.placeholder.com/50x50/000000/68A063?text=Node" },
+  { label: "Python", src: "https://via.placeholder.com/50x50/000000/3776AB?text=Python" },
+  { label: "Vite", src: "https://via.placeholder.com/50x50/000000/646CFF?text=Vite" },
+  { label: "AWS", src: "https://via.placeholder.com/50x50/000000/FF9900?text=AWS" },
+  { label: "GCP", src: "https://via.placeholder.com/50x50/000000/4285F4?text=GCP" },
+  { label: "Docker", src: "https://via.placeholder.com/50x50/000000/2496ED?text=Docker" },
+  { label: "K8s", src: "https://via.placeholder.com/50x50/000000/326CE5?text=K8s" },
+];
 
 const TechStack = () => {
   return (
@@ -17,17 +22,19 @@ const TechStack = () => {
         </div>
         
         <div className={`${styles.orbit} ${styles.orbit1}`}>
-          <div className={`${styles.techLogo} ${styles.techLogo1}`}><TechIcon label="React" /></div>
-          <div className={`${styles.techLogo} ${styles.techLogo2}`}><TechIcon label="Node.js" /></div>
-          <div className={`${styles.techLogo} ${styles.techLogo3}`}><TechIcon label="Python" /></div>
-          <div className={`${styles.techLogo} ${styles.techLogo4}`}><TechIcon label="Vite" /></div>
+          {techLogos.slice(0, 4).map((tech, index) => (
+            <div key={index} className={`${styles.techLogo} ${styles[`techLogo${index + 1}`]}`}>
+              <img src={tech.src} alt={tech.label} />
+            </div>
+          ))}
         </div>
         
         <div className={`${styles.orbit} ${styles.orbit2}`}>
-          <div className={`${styles.techLogo} ${styles.techLogo5}`}><TechIcon label="AWS" /></div>
-          <div className={`${styles.techLogo} ${styles.techLogo6}`}><TechIcon label="GCP" /></div>
-          <div className={`${styles.techLogo} ${styles.techLogo7}`}><TechIcon label="Docker" /></div>
-          <div className={`${styles.techLogo} ${styles.techLogo8}`}><TechIcon label="K8s" /></div>
+          {techLogos.slice(4, 8).map((tech, index) => (
+            <div key={index} className={`${styles.techLogo} ${styles[`techLogo${index + 5}`]}`}>
+              <img src={tech.src} alt={tech.label} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

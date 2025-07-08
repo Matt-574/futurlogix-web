@@ -1,0 +1,55 @@
+.section {
+  padding: 4rem 1rem;
+  background-color: #0A0A0A;
+  color: white;
+  text-align: center;
+}
+
+.divider {
+  width: 100px;
+  height: 2px;
+  background-color: #374151;
+  margin: 0 auto 3rem auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.card a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

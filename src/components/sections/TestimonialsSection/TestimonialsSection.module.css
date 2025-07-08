@@ -14,12 +14,14 @@
   
   .marqueeContainer {
     display: flex;
-    width: max-content;
-    animation: marquee 60s linear infinite;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    overflow: hidden; /* Asegura que el contenido desbordante se oculte */
   }
-  
-  .marqueeContainer:hover {
-    animation-play-state: paused;
+
+  .marqueeContent {
+    display: flex;
+    flex-shrink: 0; /* Evita que el contenido se encoja */
+    /* La animación de framer-motion se encargará del desplazamiento */
   }
   
   .testimonialCard {
@@ -27,11 +29,13 @@
     border: 1px solid #374151;
     border-radius: 0.75rem;
     padding: 2rem;
-    width: 400px; /* Ancho fijo para cada tarjeta */
+    min-width: 350px; /* Ancho mínimo para cada tarjeta */
     margin: 0 1rem;
     flex-shrink: 0; /* Evita que las tarjetas se encojan */
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    height: auto; /* Altura automática */
   }
   
   .quote {
@@ -48,13 +52,14 @@
     align-items: center;
     gap: 1rem;
     margin-top: auto; /* Empuja al final de la tarjeta */
+    margin-bottom: 1rem; /* Espacio entre info del autor y logo de la empresa */
   }
   
   .authorAvatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #374151; /* Placeholder */
+    object-fit: cover; /* Asegura que la imagen se ajuste */
   }
   
   .authorName {
@@ -65,12 +70,13 @@
     font-size: 0.875rem;
     color: #9ca3af;
   }
-  
-  @keyframes marquee {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+
+  .companyLogo {
+    width: 100px; /* Ancho del logo de la empresa */
+    height: auto; /* Altura automática */
+    object-fit: contain; /* Asegura que el logo se ajuste sin recortarse */
+    margin-top: 1rem; /* Espacio superior */
   }
+  
+  /* Eliminamos la animación @keyframes marquee ya que framer-motion la maneja */
+  

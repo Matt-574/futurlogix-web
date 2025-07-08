@@ -31,15 +31,43 @@
     border-radius: 0.75rem;
     padding: 2rem;
     text-align: left;
+    position: relative; /* Needed for absolute positioning of borderBeam */
+    overflow: hidden; /* Hides the overflowing borderBeam */
+  }
+
+  .borderBeam {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6); /* Gradient for the beam */
+    animation: rotateBeam 10s linear infinite; /* Animation for the beam */
+    z-index: 0; /* Behind the content */
+    opacity: 0.3; /* Subtle opacity */
+    filter: blur(20px); /* Blurry effect */
+  }
+
+  @keyframes rotateBeam {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
   
   .cardTitle {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    position: relative; /* Bring content above the beam */
+    z-index: 1;
   }
   
   .cardDescription {
     color: #9ca3af;
     line-height: 1.7;
+    position: relative; /* Bring content above the beam */
+    z-index: 1;
   }

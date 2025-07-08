@@ -1,0 +1,70 @@
+.section {
+  padding: 6rem 1rem;
+  background-color: #0A0A0A;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto 4rem auto;
+}
+
+.metricCard {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricValue {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #6366f1;
+  margin-bottom: 0.5rem;
+}
+
+.metricLabel {
+  font-size: 1.125rem;
+  color: #d1d5db;
+}
+
+.dataCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.dataCard {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.dataCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.dataCard p {
+  color: #9ca3af;
+  line-height: 1.6;
+}
